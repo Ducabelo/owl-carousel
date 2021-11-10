@@ -43,6 +43,8 @@ window.addEventListener("resize", () => {
       next.classList.remove("hide");
     } else if (carouselWidth < 1121 && index < 3) {
       next.classList.remove("hide");
+    } else if (carouselWidth >= 1121 && index >= 2) {
+      next.classList.add("hide");
     }
   }
 });
