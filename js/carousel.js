@@ -29,6 +29,7 @@ window.addEventListener("resize", () => {
       index = 5;
     } else if (carouselWidth >= 790 && index >= 4) {
       index = 3;
+      next.classList.add("hide");
     } else if (carouselWidth > 1121 && index === 3) {
       index--;
     }
