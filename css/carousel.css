@@ -1,0 +1,218 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #ccc;
+  transition: all 0.6s ease;
+}
+
+.carousel-body {
+  margin: 0 auto;
+  padding: 0 10px;
+  background: tomato;
+}
+.carousel-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  min-height: 200px;
+  position: relative;
+  display: flex;
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.carousel-container .track {
+  display: flex;
+  transition: transform 0.6s;
+  width: 100%;
+}
+
+.carousel-container .card-container {
+  /* width: 300px; */
+  width: clamp(260px, 25%, 300px);
+  height: 450px;
+  flex-shrink: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  /* background: #eee; */
+}
+
+.carousel-container .carousel-inner {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-container .card-container .card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.carousel-container .card-container .card:hover {
+  border: 1px solid #999;
+  box-shadow: 5px 2px 10px #aaa;
+}
+
+.card-container .card .img {
+  background: url(../img/1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+  max-height: 270px;
+  width: 100%;
+  transition: 0.6s ease;
+}
+.card-container .card .img:hover {
+  background: url(../img/1-1.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+}
+
+.nav button {
+  width: 40px;
+  height: 60px;
+  background: linear-gradient(180deg, #888, #333);
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  box-shadow: 0 10px 10px #444;
+}
+
+.nav button:hover {
+  background: linear-gradient(180deg, #888, #888, #444, #222, #222);
+}
+
+.nav .prev i,
+.nav .next i {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav .prev {
+  left: -40px;
+  display: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.nav .prev.show {
+  display: block;
+}
+
+.nav .next {
+  display: block;
+  right: -40px;
+  border-radius: 0 10px 10px 0;
+}
+
+.nav .next.hide {
+  display: none;
+}
+.card > * {
+  flex: 1;
+}
+
+.card .info {
+  flex-basis: 180px;
+  flex-grow: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #333;
+  border-radius: 0 0 10px 10px;
+  color: #fff;
+}
+
+@media screen and (min-width: 1217px) {
+  .carousel-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1216px) {
+  .carousel-container {
+    max-width: 85%;
+  }
+
+  .carousel-container .card-container {
+    width: 33.4%;
+  }
+
+  .card-container .card .img {
+    background-size: 70%;
+    max-height: 270px;
+    width: 100%;
+  }
+  .card-container .card .img:hover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+  }
+}
+
+@media screen and (max-width: 966px) {
+  .carousel-container {
+    max-width: 85%;
+  }
+
+  .carousel-container .card-container {
+    width: 50.1%;
+  }
+
+  .card-container .card .img {
+    background-size: 65%;
+    max-height: 270px;
+    width: 100%;
+  }
+  .card-container .card .img:hover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel-container {
+    max-width: 85%;
+  }
+
+  .carousel-container .card-container {
+    width: 100%;
+  }
+
+  .card-container .card .img {
+    background-size: 55%;
+    max-height: 270px;
+    width: 100%;
+  }
+  .card-container .card .img:hover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55%;
+  }
+
+  .nav button {
+    width: 30px;
+    height: 50px;
+  }
+
+  .nav .prev {
+    left: -30px;
+  }
+
+  .nav .next {
+    right: -30px;
+  }
+
+  .nav .prev i,
+  .nav .next i {
+    font-size: 1.7rem;
+  }
+}
