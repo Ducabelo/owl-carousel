@@ -27,7 +27,7 @@ window.addEventListener("resize", () => {
   function adjustItemsOnResize() {
     if (carouselWidth > 457 && index > 5) {
       index = 5;
-    } else if (carouselWidth > 790 && index === 5) {
+    } else if (carouselWidth >= 790 && index >= 4) {
       index = 3;
     } else if (carouselWidth > 1121 && index === 3) {
       index--;
@@ -37,13 +37,13 @@ window.addEventListener("resize", () => {
   showBtnOnResize();
 
   function showBtnOnResize() {
-    if (carouselWidth < 459 && index < 11) {
+    if (carouselWidth < 459 && index < 12) {
       next.classList.remove("hide");
     } else if (carouselWidth < 791 && index < 6) {
       next.classList.remove("hide");
     } else if (carouselWidth < 1121 && index < 3) {
       next.classList.remove("hide");
-    } else if (carouselWidth >= 1121 && index >= 2) {
+    } else if (carouselWidth > 1121 && index >= 2) {
       next.classList.add("hide");
     }
   }
